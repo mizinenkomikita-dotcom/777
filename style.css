@@ -1,0 +1,135 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 30px;
+}
+
+header {
+    background-color: #1e293b;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cbd5e1;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.top h2 {
+    font-size: 25px;
+}
+
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.job-card {
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 15px;
+    padding: 22px;
+    transition: 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.job-card h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.job-card p {
+    margin-bottom: 13px;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e40af;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+.hideButton {
+    margin-top: 5px;
+}
+
+#showButton {
+    background-color: #16a34a;
+}
+
+#showButton:hover {
+    background-color: #15803d;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: #64748b;
+}
+
+@media (max-width: 800px) {
+    .jobs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 15px;
+    }
+
+    .jobs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
